@@ -1,6 +1,7 @@
 {
+  "darkMediaQuery": true,
   "projectId": "ipnbuo",
-  "viewportWidth": 1200,
   "viewportHeight": 1200,
-  "darkMediaQuery": true
+  "viewportWidth": 1200,
+  "watchForFileChanges": false
 }

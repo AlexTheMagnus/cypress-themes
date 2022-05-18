@@ -20,7 +20,7 @@ const getSourceFolder = () => {
 const convertCssVariables = mycss =>
   postcss([cssVariables()]).process(mycss).css
 
-const knownThemes = ['dark', 'halloween']
+const knownThemes = ['dark', 'halloween', 'summer']
 
 const getHead = () => Cypress.$(parent.window.document.head)
 
