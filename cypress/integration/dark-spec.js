@@ -34,7 +34,7 @@ describe('Cypress themes', { baseUrl: 'http://www.halloween-website.com/' }, () 
 
   it('has passing test', () => {
     expect(1).to.equal(1)
-    cy.screenshot('dark-theme', { capture: 'runner' })
+    cy.screenshot('dark-theme', { capture: 'runner', overwrite: true })
   })
 
   it('has skipped test')

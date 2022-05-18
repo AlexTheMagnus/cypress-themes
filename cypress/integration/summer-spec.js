@@ -21,7 +21,7 @@ describe('Cypress themes', { baseUrl: 'https://www.pinterest.es/search/pins/?q=s
 
   it('has passing test', () => {
     expect(1).to.equal(1)
-    cy.screenshot('Summer', {capture: 'runner'})
+    cy.screenshot('Summer', {capture: 'runner', overwrite: true})
   })
 
   it('has skipped test')
