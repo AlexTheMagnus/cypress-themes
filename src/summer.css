@@ -1,4 +1,9 @@
 /* Cypress v3 */
+
+/* icons in the reporter */
+.reporter .runnable-state:hover {
+  font-size: 130%;
+}
 .reporter .runnable.test.runnable-failed .runnable-state:before {
   content: '🥵';
 }
@@ -16,7 +21,7 @@
   content: '⛵';
 }
 .reporter .command-state-pending .command-number i:before {
-  content: '🥵';
+  content: '☀️';
 }
 /* top level test counters icons */
 .fa-check:before,

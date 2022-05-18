@@ -5,13 +5,21 @@
 // loads its own
 require('../../src/summer')
 
+// Avoid Cypress failing on webpage exception
+Cypress.on('uncaught:exception', (err, runnable) => {
+  return false;
+});
+
 /*
   Several tests that show how Cypress test runner looks with
   a custom color theme
 */
-describe('Cypress themes', { baseUrl: 'https://www.pinterest.es/search/pins/?q=summer' }, () => {
+describe('Cypress themes', { baseUrl: 'https://www.pinterest.es/search/pins/?q=Summer' }, () => {
   before(() => {
     cy.visit('/')
+    cy.get('[data-test-id="login-button"]').should('be.visible')
+    cy.get('[data-test-id="signup-button"]').should('be.visible')
+    cy.get('[data-test-id="search-input"]').should('have.value', 'Summer/').should('be.visible').wait(2000)
   })
 
   it('has failing test if needed', () => {
