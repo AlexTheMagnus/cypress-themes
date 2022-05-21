@@ -3,7 +3,7 @@
 // usually we load theme from "cypress/support/index.js"
 // but since we are checking multiple themes, each spec file
 // loads its own
-require('../../src/summer')
+require('../../src/christmas')
 
 // Avoid Cypress failing on webpage exception
 Cypress.on('uncaught:exception', (err, runnable) => {
@@ -14,12 +14,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   Several tests that show how Cypress test runner looks with
   a custom color theme
 */
-describe('Cypress themes', { baseUrl: 'https://www.pinterest.es/search/pins/?q=Summer' }, () => {
+describe('Cypress themes', { baseUrl: 'https://www.pinterest.es/search/pins/?q=Christmas' }, () => {
   before(() => {
     cy.visit('/')
     cy.get('[data-test-id="login-button"]').should('be.visible')
     cy.get('[data-test-id="signup-button"]').should('be.visible')
-    cy.get('[data-test-id="search-input"]').should('have.value', 'Summer/').should('be.visible').wait(2000)
+    cy.get('[data-test-id="search-input"]').should('have.value', 'Christmas/').should('be.visible').wait(2000)
   })
 
   it('has failing test if needed', () => {
@@ -29,7 +29,7 @@ describe('Cypress themes', { baseUrl: 'https://www.pinterest.es/search/pins/?q=S
 
   it('has passing test', () => {
     expect(1).to.equal(1)
-    cy.screenshot('Summer', {capture: 'runner', overwrite: true})
+    cy.screenshot('christmas', {capture: 'runner', overwrite: true})
   })
 
   it('has skipped test')

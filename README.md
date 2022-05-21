@@ -56,6 +56,7 @@ For now all themes are shipped with this package and can use CSS variables. Avai
 
 - [dark](src/dark.css) see [images/dark.png](images/dark.png)
 - [halloween](src/halloween.css) see [images/halloween.png](images/halloween.png), also check out how it plays witch's laughter if a test fails in [src/halloween.js](src/halloween.js)
+- [christmas](src/christmas.css) see [images/christmas.png](images/christmas.png)
 
 ## Dark page under test
 

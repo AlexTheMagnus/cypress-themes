@@ -5,39 +5,39 @@
   font-size: 130%;
 }
 .reporter .runnable.test.runnable-failed .runnable-state:before {
-  content: '🥵';
+  content: '⛰️';
 }
 .reporter .runnable.test.runnable-pending .runnable-state:before {
-  content: '🏖️';
+  content: '🎁';
 }
 .reporter .runnable.test.runnable-passed .runnable-state:before {
-  content: '😎';
+  content: '🎄';
 }
 .reporter .runnable.test.runnable-active .runnable-state:before {
-  content: '☀️';
+  content: '🎁';
 }
 /* test has not started yet */
 .reporter .runnable.test.runnable-processing .runnable-state:before {
-  content: '⛵';
+  content: '🎁';
 }
 .reporter .command-state-pending .command-number i:before {
-  content: '☀️';
+  content: '🎅🏼';
 }
 /* top level test counters icons */
 .fa-check:before,
 .reporter .runnable.runnable-passed > .runnable-wrapper .runnable-state:before {
-  content: '😎';
+  content: '🎄';
 }
 .fa-times:before,
 .reporter .runnable.test.runnable-failed .runnable-state:before {
-  content: '🥵';
+  content: '⛰️';
 }
 .fa-circle-o-notch:before,
 .reporter
   .runnable.runnable-pending
   > .runnable-wrapper
   .runnable-state:before {
-  content: '🏖️';
+  content: '🎁';
 }
 
 /* switch thumb tack icon to syringe */
