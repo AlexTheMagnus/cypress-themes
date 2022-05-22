@@ -27,8 +27,8 @@ describe('Cypress themes', { baseUrl: 'http://www.halloween-website.com/' }, () 
   })
 
   it('has failing test if needed', () => {
-    expect(1).to.equal(1)
-    // expect(1).to.equal(2)
+    // expect(1).to.equal(1)
+    expect(1).to.equal(2)
   })
 
   it('has passing test', () => {

@@ -8,12 +8,11 @@ const {
 } = require('../utils')
 
 /* eslint-env mocha, browser */
-/* global cy */
-before(loadTheme('halloween'))
+before(loadTheme('christmas'))
 before(stubMediaQuery())
 
-const witchLaughs = () => {
-  const filename = join(getSourceFolder(), 'halloween/halloween-laugh.mp3')
+const santaLaughs = () => {
+  const filename = join(getSourceFolder(), 'christmas/santa-laugh.mp3')
   cy.readFile(filename, 'base64', { log: false }).then(mp3 => {
     const uri = 'data:audio/mp3;base64,' + mp3
     const audio = new Audio(uri)
@@ -22,7 +21,7 @@ const witchLaughs = () => {
 }
 
 after(() => {
-  if (hasFailed()) {
-    witchLaughs()
+  if (!hasFailed()) {
+    santaLaughs()
   }
 })
