@@ -22,6 +22,8 @@ const convertCssVariables = mycss =>
 
 const knownThemes = ['dark', 'halloween', 'christmas']
 
+const knownSubthemes = ['christmas-all-tests-pass']
+
 const getHead = () => Cypress.$(parent.window.document.head)
 
 const isStyleLoaded = $head => $head.find('#cypress-themes').length > 0
@@ -87,6 +89,29 @@ const loadTheme = theme => {
   }
 }
 
+const loadSubtheme = subtheme => {
+  if (!knownSubthemes.includes(subtheme)) {
+    console.error(
+      'Unknown subtheme name "%s", only known subthemes are: %s',
+      subtheme,
+      knownSubthemes.join(', ')
+    )
+    return
+  }
+
+  const theme = subtheme.substr(0, subtheme.indexOf('-'))
+  const subthemeFilename = join(getSourceFolder(), `${theme}/${subtheme}.css`)
+  const $head = getHead()
+
+  cy.readFile(subthemeFilename, { log: false })
+    .then(convertCssVariables)
+    .then(css => {
+      $head.append(
+        `<style type="text/css" id="cypress-themes-subtheme" theme="${subtheme}">\n${css}</style>`
+      )
+    })
+}
+
 const stubMediaQuery = () => () => {
   if (!shouldStubMediaQuery()) {
     return
@@ -111,6 +136,7 @@ module.exports = {
   getSourceFolder,
   hasFailed,
   loadTheme,
+  loadSubtheme,
   isTheme,
   stubMediaQuery
 }

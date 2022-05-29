@@ -4,6 +4,7 @@ const {
   getSourceFolder,
   hasFailed,
   loadTheme,
+  loadSubtheme,
   stubMediaQuery
 } = require('../utils')
 
@@ -22,6 +23,7 @@ const santaLaughs = () => {
 
 after(() => {
   if (!hasFailed()) {
+    loadSubtheme('christmas-all-tests-pass')
     santaLaughs()
   }
 })

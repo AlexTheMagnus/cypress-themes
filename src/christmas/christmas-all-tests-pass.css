@@ -1,0 +1,15 @@
+/* Cypress v3 */
+
+:root {
+  --background: #222426;
+  /* other misc stuff */
+  --header-color: #ee7205;
+  --header-shadow: 0 1px 3px #f88d09;
+  --header-border: solid 1px #f88d09;
+}
+
+.runner header {
+  background-color: var(--background);
+  box-shadow: var(--header-shadow);
+  -webkit-box-shadow: var(--header-shadow);
+}

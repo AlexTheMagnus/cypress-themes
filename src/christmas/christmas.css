@@ -5,7 +5,7 @@
   font-size: 130%;
 }
 .reporter .runnable.test.runnable-failed .runnable-state:before {
-  content: '⛰️';
+  content: '💩';
 }
 .reporter .runnable.test.runnable-pending .runnable-state:before {
   content: '🎁';
@@ -30,7 +30,7 @@
 }
 .fa-times:before,
 .reporter .runnable.test.runnable-failed .runnable-state:before {
-  content: '⛰️';
+  content: '💩';
 }
 .fa-circle-o-notch:before,
 .reporter
